@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .home{
+            margin-top:-4px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body id="body">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-primary"> 
+        <a class="navbar-brand" href="#">Reminder</a> 
+        <button class="btn navbar-toggler navbar-toggler-icon" data-toggle="collapse" href="#collapsibleNavbar">
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="ml-auto navbar-nav">
+             <li class="nav-item">
+                <a class="nav-link home active" href="index.html">Home</a>
+             </li>
+             <li class="nav-item">
+              <a class="nav-link home" target="_self" href="about.html">About us</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link home" target="_self" href="contact.html">Contact us</a>
+         </li>
+             <li class="nav-item">
+              <label class="text-primary" for="dark">Dark Mode</label>
+              <button id="dark" class="btn btn-primary">On/Off</button>
+             </li>
+          </ul>
+         </div>
+    </nav>
+    <!-- input -->
+    <div class="mb-3 mx-5">
+        <label for="name" class="form-label">Reminder Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter the reminder name"> <br>
+        <label for="input" class="form-label">Time and year and month and date</label>
+        <input type="text" class="form-control" id="input" placeholder="Enter the time as yy-mm-dd time"> <br>
+        <button class="btn btn-primary" id="btn">Submit</button>
+        <h1 id="output"></h1>
+      </div>
+      <audio controls hidden id="audio" src="https://muhammedraiyaan2.github.io/Server/alaram.mp3"></audio>
+    <script src="brain.js"></script>
+</body>
+</html>
