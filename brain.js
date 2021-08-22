@@ -2,13 +2,17 @@ let dark=document.getElementById('dark')
 let body=document.getElementById('body')
 let nav=document.getElementById('nav')
 let btn=document.getElementById('btn')
-let input=document.getElementById('input')
+let inpu=document.getElementById('input')
 let audio=document.getElementById('audio')
 let name=document.getElementById('name')
 let output=document.getElementById('output')
 nav.style.background="#f8f9fa"
 nav.style.color="#212529"
 btn.addEventListener("click",function(){
+    output.innerText=`Setting the alarm...`
+    setTimeout(() => {
+        output.innerText=`The alarm has been set for ${name.value}`
+    }, 2000);
     let date=new Date(input.value)
     now=new Date()
     if(date<now){
