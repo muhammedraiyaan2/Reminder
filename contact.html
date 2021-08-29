@@ -1,15 +1,28 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .home{
-            margin-top:-4px;
-        }
-        .loader{
-            background-color: red;
-            height: 3px;
-        }
-    </style>
+ <style>
+  .home {
+   margin-top: -2.5px;
+  }
+  .loader{
+      background-color: red;
+      height: 3px;
+  }
+  @media screen and (max-width:750px) {
+    #container{
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+  @media  screen and (max-width:3000px) and (min-width:750px){
+      #container{
+          font-size: 30px;
+      }
+  }
+ </style>
     <meta name="description" content="About the Reminder">
     <link rel="shortcut icon" href="https://muhammedraiyaan2.github.io/Server/reminder-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -23,9 +36,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body id="body">
-    <div class="loader" id="loader"></div>
+    <div id="loader" class="loader"></div>
   <nav id="nav" class="navbar navbar-expand-lg navbar-primary"> 
-    <a class="navbar-brand" href="index.html">Reminder</a> 
+    <a class="navbar-brand" href="#">Reminder</a> 
     <button class="btn navbar-toggler navbar-toggler-icon" data-toggle="collapse" href="#collapsibleNavbar">
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -48,17 +61,16 @@
 </nav>
 <div id="content">
 <div id="container">
-    <br>
     <div class="mx-5 text-light">
-    <h3><a class="text-white" target="_blank" href="https://github.com/muhammedraiyaan2"><b>Github</b></a>: muhammedraiyaan2</h3>
-    <h3><b>Mail</b>: muhammedraiyaan2@gmail.com</h3>
+    <font><a class="text-white" target="_blank" href="https://github.com/muhammedraiyaan2"><b>Github</b></a>: muhammedraiyaan2</font>
+    <br><font><b>Mail</b>: muhammedraiyaan2@gmail.com</font>
     <br>
 </div>
 </div>
 </div>
 </body>
 <script>
-    //loader
+//loader
 let content=document.getElementById(`content`)
 let loader=document.getElementById('loader')
 let wid=0
@@ -68,10 +80,11 @@ setInterval(() => {
     loader.style.width=`${wid}%`
     if(wid==100){
     wid=-10*100000*10000*10000
-    loader.style.display="none"
+    loader.style.visibility="hidden"
     content.style.visibility="visible"
    }
 }, 10);
+// dark mode and light mode
 let con=document.getElementById('container')
 let dark=document.getElementById('dark')
 let body=document.getElementById('body')
